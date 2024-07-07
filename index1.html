@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Support System for Sleeping Disorder Problems</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #a600f3;
+        }
+        form {
+            margin-bottom: 20px;
+            text-align: center; /* Center align text in the form */
+        }
+        label {
+         
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            text-align: center; /* Left align labels */
+        }
+        input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            text-align: center; /* Center align input text */
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #a600f3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #b74aea;
+        }
+        #result {
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Decision Support System for Sleeping Disorder Problems</h1>
+    <form id="fuzzyForm">
+        <label for="sleepDuration">Sleep Duration (hours)</label>
+        <input type="number" id="sleepDuration" name="sleepDuration" step="0.5" min="1" max="12" required>
+        
+        <label for="sleepQuality">Sleep Quality (scale: 1-10)</label>
+        <input type="number" id="sleepQuality" name="sleepQuality" min="1" max="10"  step="1" required>
+        
+        <label for="mood">Mood (scale: 1-10)</label>
+        <input type="number" id="mood" name="mood" min="1" max="10" step="1" required>
+        
+        <label for="activityLevel">Activity Level (scale: 1-10)</label>
+        <input type="number" id="activityLevel" name="activityLevel" min="1" max="10" step="1" required>
+        
+        <button type="submit">Evaluate</button>
+    </form>
+    
+    <div id="result"></div>
+
+    <script src="scripts.js">
+    </script>
+</body>
+</html>
